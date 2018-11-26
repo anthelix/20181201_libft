@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/20 18:24:50 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/21 18:10:19 by schatagn         ###   ########.fr       */
+/*   Created: 2018/11/26 17:11:04 by schatagn          #+#    #+#             */
+/*   Updated: 2018/11/26 17:54:11 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <unistd.h>
+//remplit les n premiers octets de la zone mémoire pointée par s avec l'octet c.
+//renvoie un pointeur sur la zone mémoire s.
 
-void	ft_putendl_fd(char const *s, int fd)
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	char	*p_s;
+
+	p_s = (char *)s;
+	while (n > 0)
+	{
+		*p_s = c;
+		p_s++;
+		n--;
+	}
+	return ((void *)s);
 }

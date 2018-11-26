@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/20 18:24:50 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/21 18:10:19 by schatagn         ###   ########.fr       */
+/*   Created: 2018/11/26 17:06:32 by schatagn          #+#    #+#             */
+/*   Updated: 2018/11/26 17:08:18 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putendl_fd(char const *s, int fd)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+
+
 }

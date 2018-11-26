@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_nrvf.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/20 18:24:50 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/21 18:10:19 by schatagn         ###   ########.fr       */
+/*   Created: 2018/11/26 14:40:34 by schatagn          #+#    #+#             */
+/*   Updated: 2018/11/26 15:15:10 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putendl_fd(char const *s, int fd)
+int	ft_nrvf(int c)
 {
-	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n', fd);
+	return ((c == '\n' || c == '\t' || c == '\r' || c == '\v') ? 1 : 0);
 }
