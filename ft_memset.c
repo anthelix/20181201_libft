@@ -6,7 +6,7 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 17:11:04 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/26 17:54:11 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/11/26 20:08:45 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	char	*p_s;
+	unsigned char	*p_s;
 
-	p_s = (char *)s;
+	p_s = (unsigned char *)s;
 	while (n > 0)
 	{
 		*p_s = c;

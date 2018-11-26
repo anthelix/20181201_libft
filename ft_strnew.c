@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/26 17:56:39 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/26 20:08:46 by schatagn         ###   ########.fr       */
+/*   Created: 2018/11/26 19:19:26 by schatagn          #+#    #+#             */
+/*   Updated: 2018/11/26 20:20:15 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+//Alloue (avec malloc(3)) et retourne une chaîne de caractère “fraiche” terminée 
+//par un ’\0’. Chaque caractère de la chaîne est initialisé à ’\0’. 
+//Si l’allocation echoue, la fonction renvoie NULL.
+
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strnew(size_t size)
 {
-	while (n > 0)
-	{
-		ft_memset(s, '\0', n);
-		n--;
-	}
+	return (ft_memalloc(size + 1));
 }

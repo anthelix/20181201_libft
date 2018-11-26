@@ -6,7 +6,7 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 14:11:10 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/26 18:17:51 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/11/26 19:30:46 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void	ft_strdel(char **as);
 //char 	*ft_strjoin(char const *s1, char const *s2);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memalloc(size_t size);
+char	*ft_strnew(size_t size);
 
 //***FONCTIONS PERSO
 int		ft_islowercase(int c);

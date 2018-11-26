@@ -6,7 +6,7 @@
 #    By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/20 14:15:07 by schatagn          #+#    #+#              #
-#    Updated: 2018/11/26 17:57:32 by schatagn         ###   ########.fr        #
+#    Updated: 2018/11/26 19:30:48 by schatagn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,9 @@ SRC		=	./ft_putchar.c ./ft_putnbr.c ./ft_putstr.c ./ft_putendl.c \
 	./ft_strcpy.c ./ft_strncpy.c ./ft_atoi.c\
 	./ft_strchr.c ./ft_strrchr.c ./ft_strcmp.c ./ft_strncmp.c\
 	./ft_strstr.c ./ft_strdup.c ./ft_strnstr.c ./ft_nrvf.c\
-	./ft_strclr.c ./ft_strdel.c ./ft_memset.c ./ft_bzero.c\
+	./ft_strclr.c ./ft_strdel.c ./ft_memset.c ./ft_bzero.c ./ft_memalloc.c\
+	./ft_strnew.c 
+
 
 
 OBJS	=	$(SRC:.c=.o)
