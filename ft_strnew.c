@@ -6,7 +6,7 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 19:19:26 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/26 20:20:15 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/11/27 18:50:28 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,7 @@
 
 char	*ft_strnew(size_t size)
 {
-	return (ft_memalloc(size + 1));
+	if (size)
+		return (ft_memalloc(size + 1));
+	return (0);
 }

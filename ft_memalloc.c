@@ -6,7 +6,7 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 18:14:47 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/26 20:19:02 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/11/27 18:52:00 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,14 @@
 
 void	*ft_memalloc(size_t size)
 {
-	unsigned char	*k;
+	if (size)
+	{
+		unsigned char	*k;
 
-	if (!(k = (unsigned char*) malloc(size * sizeof(unsigned char))))
-		return (NULL);
-	ft_bzero(k, size);
-	return ((void *)(k));
+		if (!(k = (unsigned char*) malloc(size * sizeof(unsigned char))))
+			return (NULL);
+		ft_bzero(k, size);
+		return ((void *)(k));
+	}
+	return (0);
 }

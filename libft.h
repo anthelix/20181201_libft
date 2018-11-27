@@ -6,7 +6,7 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 14:11:10 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/26 19:30:46 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/11/27 19:45:56 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,19 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char const *s, int fd);
 void	ft_strclr(char *s);
 void	ft_strdel(char **as);
+void	ft_memdel(void **ap);
+
 //char 	*ft_strjoin(char const *s1, char const *s2);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memalloc(size_t size);
 char	*ft_strnew(size_t size);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
+
+
+
 
 //***FONCTIONS PERSO
 int		ft_islowercase(int c);
@@ -62,6 +71,8 @@ int		ft_isalpha(int c);
 int		ft_atoi(const char *str);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int 	ft_strequ(char const *s1, char const *s2);
 size_t 	ft_strlen(const char *s);
 size_t	ft_strlcat(char *dest, const char *src, size_t count);
 
