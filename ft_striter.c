@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/26 18:14:47 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/27 18:52:00 by schatagn         ###   ########.fr       */
+/*   Created: 2018/11/28 09:14:13 by schatagn          #+#    #+#             */
+/*   Updated: 2018/11/28 09:53:29 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//Alloue (avec malloc(3)) et retourne une zone de mémoire “fraiche”. La mémoire 
-//allouée est initialisée à 0. Si l’allocation échoue, la fonction renvoie NULL.
-
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
-{
-	if (size)
-	{
-		unsigned char	*k;
+//Applique la fonction f à chaque caractère de la chaîne de caractères passée 
+//en paramètre. Chaque caractère est passé par adresse à la fonction f afin de 
+//pouvoir être modifié si nécessaire
+// retour : rien
 
-		if (!(k = (unsigned char*) malloc(size * sizeof(unsigned char))))
-			return (NULL);
-		ft_bzero(k, size);
-		return ((void *)(k));
+void ft_striter(char *s, void (*f)(char *))
+{
+	if (s && f)
+	{
+		int	i;
+
+		i = 0;
+		while (s[i] != '\0')
+		{
+			(*f)(&s[i]);
+			i++;
+		}
 	}
-	return (0);
 }
