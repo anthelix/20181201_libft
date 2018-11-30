@@ -1,22 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 19:44:50 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/29 14:09:30 by schatagn         ###   ########.fr       */
+/*   Created: 2018/11/29 15:35:44 by schatagn          #+#    #+#             */
+/*   Updated: 2018/11/29 16:36:22 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	if (s1 && s2)
+	char	*fraiche;
+	size_t	i;
+	size_t	j;
+	char	*p_s;
+
+	i = 0;
+	j = start;
+	p_s = (char*)s;
+	fraiche = NULL;
+	if ((s) && (fraiche = (ft_strnew(len))))
 	{
-		return (ft_strcmp(s1, s2) ? 0 : 1);
+		while (len > 0)
+		{
+			fraiche[i] = p_s[start];
+			i++;
+			start++;
+			len--;
+		}
 	}
-	return (0);
+	return (fraiche);
 }

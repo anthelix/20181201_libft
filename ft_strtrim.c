@@ -1,22 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strequ.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 19:44:50 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/29 14:09:30 by schatagn         ###   ########.fr       */
+/*   Created: 2018/11/30 12:18:57 by schatagn          #+#    #+#             */
+/*   Updated: 2018/11/30 17:57:25 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strequ(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s)
 {
-	if (s1 && s2)
+	char	*k;
+	size_t	i;
+	size_t	j;
+
+	i = ft_strlen(s);
+	if (!(k = (char*)malloc(i * sizeof(char) + 1)))
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s || s[i] != '\0')
 	{
-		return (ft_strcmp(s1, s2) ? 0 : 1);
+		while ((s[i] == ' ' || s[i] == '\t' || s[i] == '\n'))
+		{
+			i++;
+		}
+		while (!(s[i] == ' ' || s[i] == '\t' || s[i] == '\n') && s[i] != '\0')
+		{
+			k[j] = s[i];
+			j++;
+			i++;
+		}
 	}
-	return (0);
+	return (i > 0 ? k : NULL);
 }

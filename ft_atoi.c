@@ -6,7 +6,7 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 14:26:15 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/27 09:33:06 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/11/29 13:14:11 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,3 @@ int		ft_atoi(const char *str)
 	}
 	return (res);
 }
-// #include <stdlib.h>
-// #include <stdio.h>
-// int		main(void)
-// {
-// 	printf("atoi : %d\nft_atoi : %d\n", atoi("99999999999999999999999999"),
-// 		atoi("99999999999999999999999999"));
-// 	return (0);
-// }

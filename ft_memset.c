@@ -6,12 +6,9 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 17:11:04 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/26 20:08:45 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/11/29 12:35:49 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-//remplit les n premiers octets de la zone mémoire pointée par s avec l'octet c.
-//renvoie un pointeur sur la zone mémoire s.
 
 #include "libft.h"
 

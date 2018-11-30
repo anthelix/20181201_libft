@@ -6,7 +6,7 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 14:11:10 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/28 11:26:18 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/11/30 12:20:07 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ void	ft_strclr(char *s);
 void	ft_strdel(char **as);
 void	ft_memdel(void **ap);
 
-//char 	*ft_strjoin(char const *s1, char const *s2);
+char 	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memalloc(size_t size);
 char	*ft_strnew(size_t size);
@@ -54,6 +55,7 @@ void 	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char 	*ft_strmap(char const *s, char (*f)(char));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
 
 
 
