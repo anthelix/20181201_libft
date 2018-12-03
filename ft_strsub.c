@@ -6,7 +6,7 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 15:35:44 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/29 16:36:22 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/12/03 08:53:37 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*fraiche;
 	size_t	i;
-	size_t	j;
 	char	*p_s;
 
 	i = 0;
-	j = start;
 	p_s = (char*)s;
 	fraiche = NULL;
 	if ((s) && (fraiche = (ft_strnew(len))))
