@@ -6,7 +6,7 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 12:18:57 by schatagn          #+#    #+#             */
-/*   Updated: 2018/12/03 13:48:11 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/12/04 12:07:26 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,29 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t		i;
-	size_t		len;
-	size_t		n;
-	char 		*k;
-
+	char	*k;
+	int		i;
+	int		j;
+	int		len;
 
 	i = 0;
-	n = 0;
+	j = 0;
 	k = NULL;
-
-	if (s && s[i] != '\0')
+	if (s)
 	{
-	
+		len = ft_strlen(s);
+		if (s || s[i] != '\0')
+		{
+			while ((s[i] == ' ' || s[i] == '\t' || s[i] == '\n') && (i < len))
+				i++;
+			j = len - 1;
+			while ((s[j] == ' ' || s[j] == '\t' || s[j] == '\n') && (j > i))
+				j--;
+			len = j - i + 1;
+		}
+		if (!(k = (char*)malloc(len * sizeof(char) + 1)))
+			return (NULL);
+		k = ft_strsub(s, i, len);
+	}
 	return (k);
 }
-	
-	
-	
-	
-	
-	
-	
-	// while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-	
