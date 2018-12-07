@@ -6,13 +6,14 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 13:51:59 by schatagn          #+#    #+#             */
-/*   Updated: 2018/12/04 11:54:43 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/12/05 11:29:44 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-int		ft_count_word(char *s, char c)
+static	int	ft_count_word(char *s, char c)
 {
 	int	i;
 	int	nbr_word;
@@ -35,7 +36,7 @@ int		ft_count_word(char *s, char c)
 	return (nbr_word);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char		**ft_strsplit(char const *s, char c)
 {
 	int		nbr_word;
 	int		count_letter;

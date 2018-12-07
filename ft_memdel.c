@@ -6,11 +6,12 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 19:38:20 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/27 19:43:15 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/12/05 11:55:57 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {

@@ -6,11 +6,12 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 17:20:08 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/20 17:51:14 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/12/05 11:12:37 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {

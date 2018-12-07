@@ -6,11 +6,12 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 16:42:02 by schatagn          #+#    #+#             */
-/*   Updated: 2018/11/29 13:58:27 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/12/05 11:56:38 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_strdel(char **as)
 {

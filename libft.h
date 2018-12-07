@@ -6,13 +6,12 @@
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 14:11:10 by schatagn          #+#    #+#             */
-/*   Updated: 2018/12/04 12:48:40 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/12/05 11:47:49 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdlib.h>
 # include <string.h>
 # define ISNULL(x)		if ((x) == NULL) return (NULL)
 

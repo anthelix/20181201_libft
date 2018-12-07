@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schatagn <schatagn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 10:54:08 by schatagn          #+#    #+#             */
-/*   Updated: 2018/12/04 22:28:05 by schatagn         ###   ########.fr       */
+/*   Updated: 2018/12/04 20:34:51 by schatagn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,29 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	t_count		h;
-	t_count		n;
-	t_count		x;
+	char	*p_n;
 
-	h = 0;
-	n = 0;
-	if (needle[n] == '\0')
+	p_n = (char*)needle;
+	if (!(*needle))
 		return ((char*)haystack);
-	while (haystack[h] != '\0')
+	if (*haystack && len)
 	{
-		n = 0;
-		x = h;
-		while ((haystack[x] == needle[n]) && x <= len)
+		while (len-- || len > 0)
 		{
-			x++;
-			n++;
-			if (needle[n] == '\0')
-				return ((char*)&haystack[h]);
+			if (*p_n == *haystack)
+				p_n++;
+			else
+			{
+				haystack = haystack - (p_n - needle);
+				len = len + (p_n - needle);
+				p_n = (char*)needle;
+			}
+			haystack++;
+			if (*p_n == '\0')
+				return ((char*)(haystack - (p_n - needle)));
+			if (*haystack == '\0')
+				return (NULL);
 		}
-		h++;
 	}
 	return (NULL);
 }
